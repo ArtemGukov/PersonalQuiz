@@ -12,6 +12,10 @@
 		AC245937223AC78D0004BE08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC245935223AC78D0004BE08 /* Main.storyboard */; };
 		AC245939223AC78F0004BE08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC245938223AC78F0004BE08 /* Assets.xcassets */; };
 		AC24593C223AC78F0004BE08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC24593A223AC78F0004BE08 /* LaunchScreen.storyboard */; };
+		AC245944223ACD120004BE08 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC245943223ACD120004BE08 /* QuestionViewController.swift */; };
+		AC245946223ACD1D0004BE08 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC245945223ACD1D0004BE08 /* ResultViewController.swift */; };
+		AC24594A223AD5F50004BE08 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC245949223AD5F50004BE08 /* Question.swift */; };
+		AC24594C223AD6780004BE08 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC24594B223AD6780004BE08 /* Answer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		AC245938223AC78F0004BE08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC24593B223AC78F0004BE08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC24593D223AC78F0004BE08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC245943223ACD120004BE08 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		AC245945223ACD1D0004BE08 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		AC245949223AD5F50004BE08 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		AC24594B223AD6780004BE08 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,33 @@
 			isa = PBXGroup;
 			children = (
 				AC245931223AC78D0004BE08 /* AppDelegate.swift */,
-				AC245933223AC78D0004BE08 /* ViewController.swift */,
+				AC245947223AD5C10004BE08 /* Model */,
+				AC245948223AD5D40004BE08 /* ViewControllers */,
 				AC245935223AC78D0004BE08 /* Main.storyboard */,
 				AC245938223AC78F0004BE08 /* Assets.xcassets */,
 				AC24593A223AC78F0004BE08 /* LaunchScreen.storyboard */,
 				AC24593D223AC78F0004BE08 /* Info.plist */,
 			);
 			path = PersonalQuiz;
+			sourceTree = "<group>";
+		};
+		AC245947223AD5C10004BE08 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC245949223AD5F50004BE08 /* Question.swift */,
+				AC24594B223AD6780004BE08 /* Answer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC245948223AD5D40004BE08 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC245933223AC78D0004BE08 /* ViewController.swift */,
+				AC245943223ACD120004BE08 /* QuestionViewController.swift */,
+				AC245945223ACD1D0004BE08 /* ResultViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +124,7 @@
 				TargetAttributes = {
 					AC24592D223AC78D0004BE08 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -135,8 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC24594A223AD5F50004BE08 /* Question.swift in Sources */,
 				AC245934223AC78D0004BE08 /* ViewController.swift in Sources */,
 				AC245932223AC78D0004BE08 /* AppDelegate.swift in Sources */,
+				AC24594C223AD6780004BE08 /* Answer.swift in Sources */,
+				AC245944223ACD120004BE08 /* QuestionViewController.swift in Sources */,
+				AC245946223ACD1D0004BE08 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,8 +324,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.gukov.PersonalQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,8 +342,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.gukov.PersonalQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
